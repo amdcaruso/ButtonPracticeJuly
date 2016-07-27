@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+</head>
+<body ng-controller="MainCtrl as login">
+    <div>
+        <button ng-disabled="login.isDisabled1" ng-model="login.clickCount1" ng-style="login.myStyleButton1" ng-click="login.myStyleButton1={background:'blue'}; login.clickIncrement1(login.clickCount1, login.max1)" class="button1">
+            <span ng-model="login.textButton1"></span>
+            <span ng-bind="login.textButton1"></span>
+        </button>
+        <span ng-bind="login.clickCount1"></span>
+    </div>
+    <div>
+        <button ng-disabled="login.isDisabled2" ng-model="login.clickCount2" ng-style="login.myStyleButton2" ng-click="login.myStyleButton2={background:'blue'}; login.clickIncrement2(login.clickCount2, login.max2)" class="button2">
+            <span ng-model="login.textButton2"></span>
+            <span ng-bind="login.textButton2"></span>
+        </button>
+        <span ng-bind="login.clickCount2"></span>
+    </div>
+    <div>
+        <button ng-disabled="login.isDisabled3" ng-model="login.clickCount3" ng-style="login.myStyleButton3" ng-click="login.myStyleButton3={background:'blue'}; login.clickIncrement3(login.clickCount3, login.max3)" class="button3">
+            <span ng-model="login.textButton3"></span>
+            <span ng-bind="login.textButton3"></span>
+        </button>
+        <span ng-bind="login.clickCount3"></span>
+    </div>
+    <!--  <div><button max="1"  class="button3">Click me</button></div>-->
+    <div>
+        <button class="button4" ng-click="login.reset()">
+            Reset
+        </button>
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.js"></script>
+</body>
+</html>
